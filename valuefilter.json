@@ -22,7 +22,12 @@
       "id_name" : "drop_or_keep",
       "type" : "radio",
       "radio_items" : "Delete|Keep",
-      "default": "1"
+      "default": "0",
+      "visible_if": {
+        "id_name": "column",
+        "value": true,
+        "invert": false
+      }
     }
   ]
 }

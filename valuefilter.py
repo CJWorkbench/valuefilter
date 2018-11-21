@@ -8,11 +8,14 @@ def value_filter(table, column, values, drop_or_keep):
 
     # delete values
     if drop_or_keep == 0:
-        return table[table[column].astype(str).isin(values)].reset_index(drop=True)
+        # NOP
+        if len(values) == 0:
+            return table
+        return table[~table[column].astype(str).isin(values)].reset_index(drop=True)
 
     # keep values
     elif drop_or_keep == 1:
-        return table[~table[column].astype(str).isin(values)].reset_index(drop=True)
+        return table[table[column].astype(str).isin(values)].reset_index(drop=True)
 
     return table
 
@@ -27,6 +30,6 @@ def render(table, params):
     if not valueselect:
         values = []
     else:
-        values = json.loads(valueselect)['blacklist']
+        values = json.loads(valueselect)
 
     return value_filter(table, column, values, drop_or_keep)
