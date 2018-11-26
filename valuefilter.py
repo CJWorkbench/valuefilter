@@ -24,12 +24,10 @@ def render(table, params):
     column = params['column']
     valueselect = params['valueselect']
     drop_or_keep = params['drop_or_keep']
-    if not column:
-        return table
+    values = json.loads(valueselect) if valueselect else []
 
-    if not valueselect:
-        values = []
-    else:
-        values = json.loads(valueselect)
+    #NOP
+    if not column or not values:
+        return table
 
     return value_filter(table, column, values, drop_or_keep)

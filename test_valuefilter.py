@@ -43,6 +43,7 @@ class RenderTest(unittest.TestCase):
         assert_frame_equal(result, expected)
 
     def test_NOP(self):
+        # Drop with valueselect = empty array
         result = pd.DataFrame({'A': ['', np.nan, 'x']})
         result = render(result,
                         {'column': 'A',
@@ -52,11 +53,31 @@ class RenderTest(unittest.TestCase):
         expected = pd.DataFrame({'A': ['', np.nan, 'x']})
         assert_frame_equal(result, expected)
 
+        # Keep with valueselect = empty array
+        result = pd.DataFrame({'A': ['', np.nan, 'x']})
+        result = render(result,
+                        {'column': 'A',
+                         'valueselect': str('[]'),
+                         'drop_or_keep': 1
+                         })
+        expected = pd.DataFrame({'A': ['', np.nan, 'x']})
+        assert_frame_equal(result, expected)
+
+        # Keep with valueselect = None
+        result = pd.DataFrame({'A': ['', np.nan, 'x']})
+        result = render(result,
+                        {'column': 'A',
+                         'valueselect': None,
+                         'drop_or_keep': 1
+                         })
+        expected = pd.DataFrame({'A': ['', np.nan, 'x']})
+        assert_frame_equal(result, expected)
+
     def test_missing_colname(self):
         result = pd.DataFrame({'A': [1]})
         result = render(result,
                         {'column': 'B',
-                         'valueselect': str('[]'),
+                         'valueselect': str('[1]'),
                          'drop_or_keep': 0
                          })
         self.assertEqual(result, 'You chose a missing column')
