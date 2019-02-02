@@ -2,7 +2,7 @@
   "name": "Filter by value",
   "id_name": "valuefilter",
   "category" : "Analyze",
-  "description": "",
+  "description": "List all unique values and select values to keep or delete.",
   "icon": "filter",
   "help_url":"",
   "parameters": [
