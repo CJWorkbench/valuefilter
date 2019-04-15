@@ -5,7 +5,7 @@ description: 'List all unique values and select values to keep or delete.'
 icon: filter
 help_url: ''
 param_schema:  # needed because `parameters` includes a `custom` value
-  column: { type: column }
+  column: { type: column, column_types: [ text ] }
   drop: { type: boolean }
   valueselect:
     type: list
@@ -15,6 +15,7 @@ parameters:
   type: column
   name: ''
   placeholder: Select column
+  column_types: [ text ]
 - id_name: valueselect
   type: custom
   name: ''
