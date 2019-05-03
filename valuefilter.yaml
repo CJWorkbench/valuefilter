@@ -23,5 +23,5 @@ parameters:
   type: radio
   default: false
   options:
-  - { value: true, label: 'Delete' }
   - { value: false, label: 'Keep' }
+  - { value: true, label: 'Delete' }
