@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+from cjwmodule import i18n
 
 
 def value_filter(table, column, values, drop):
@@ -25,7 +26,10 @@ def render(table, params, *, input_columns):
         return table  # no-op
 
     if input_columns[column].type != 'text':
-        return 'Please convert this column to Text first.'
+        return i18n.trans(
+            "badParam.column.notText",
+            'Please convert this column to Text first.'
+        )
 
     return value_filter(table, column, values, params['drop'])
 
