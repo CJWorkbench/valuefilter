@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-02-07 20:15+0000\n"
+"POT-Creation-Date: 2020-02-18 16:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: el\n"
@@ -20,19 +20,21 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 msgid "_spec.name"
-msgstr ""
+msgstr "Φιλτράρισμα βάσει τιμής"
 
 msgid "_spec.description"
 msgstr ""
+"Απαρίθμηση όλων των μοναδικών τιμών και επιλογή τιμών για διατήρηση ή "
+"διαγραφή."
 
 msgid "_spec.parameters.column.placeholder"
-msgstr ""
+msgstr "Επιλέξτε στήλη"
 
 msgid "_spec.parameters.drop.options.False.label"
-msgstr ""
+msgstr "Διατήρηση"
 
 msgid "_spec.parameters.drop.options.True.label"
-msgstr ""
+msgstr "Διαγραφή"
 
 #: valuefilter.py:29
 msgid "badParam.column.notText"
