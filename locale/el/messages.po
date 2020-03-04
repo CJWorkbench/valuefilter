@@ -38,5 +38,5 @@ msgstr "Διαγραφή"
 
 #: valuefilter.py:29
 msgid "badParam.column.notText"
-msgstr ""
+msgstr "Μετατρέψτε πρώτα την παρούσα στήλη σε κείμενο."
 
