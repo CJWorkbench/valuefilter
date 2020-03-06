@@ -1,0 +1,25 @@
+#. default-message: Filter by value
+msgid "_spec.name"
+msgstr ""
+
+#. default-message: List all unique values and select values to keep or delete.
+msgid "_spec.description"
+msgstr ""
+
+#. default-message: Select column
+msgid "_spec.parameters.column.placeholder"
+msgstr ""
+
+#. default-message: Keep
+msgid "_spec.parameters.drop.options.False.label"
+msgstr ""
+
+#. default-message: Delete
+msgid "_spec.parameters.drop.options.True.label"
+msgstr ""
+
+#. default-message: Please convert this column to Text first.
+#: valuefilter.py:29
+msgid "badParam.column.notText"
+msgstr ""
+

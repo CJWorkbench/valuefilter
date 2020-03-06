@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from pandas.testing import assert_frame_equal
 from valuefilter import value_filter, render, migrate_params
+from cjwmodule.testing.i18n import i18n_message
 
 @dataclass(frozen=True)
 class Column:
@@ -118,8 +119,7 @@ class RenderTest(unittest.TestCase):
         result = render(pd.DataFrame({'A': [1, 2]}),
                         {'column': 'A', 'valueselect': ['1'], 'drop': True},
                         input_columns={'A': Column('A', 'number')})
-        self.assertEqual(result,
-                         'Please convert this column to Text first.')
+        self.assertEqual(result, i18n_message("badParam.column.notText"))
 
 
 if __name__ == '__main__':
